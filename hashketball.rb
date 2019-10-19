@@ -261,17 +261,18 @@ def winning_team
       end
     memo
   end
+  
   high = 0
-  winner = team_score.reduce do
-    |memo, (team, score)|
+  winner = ""
+  team_score.each do
+    |(team, score)|
     if score > high
-      high = score 
-      memo = team
+      high = score
+      winner = team
     end
-    memo
   end
   winner
-end
+end     
 
 def player_with_longest_name
   teams = game_hash
