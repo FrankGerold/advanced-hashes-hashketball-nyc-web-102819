@@ -247,3 +247,16 @@ def most_points_scored
   end
   big_player
 end
+
+def winning_team
+  teams = game_hash
+  numbers = teams.reduce([]) do
+    |memo, (team, details)|
+    details[:players].each do
+        |(player)|
+        memo += player[:points]
+      end
+    memo
+  end
+  numbers
+end
