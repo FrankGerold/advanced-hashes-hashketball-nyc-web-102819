@@ -250,11 +250,11 @@ end
 
 def winning_team
   teams = game_hash
-  team_score = teams.reduce([]) do
+  team_score = teams.reduce({}) do
     |memo, (team, details)|
     details[:players].each do
         |(player)|
-        memo += player[:points]
+        memo[details:team_name] += player[:points]
       end
     memo
   end
