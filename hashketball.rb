@@ -254,7 +254,9 @@ def winning_team
     |memo, (team, details)|
     details[:players].each do
         |(player)|
-        memo[details:team_name] += player[:points]
+        #if !memo[details[:team_name]]
+        #  memo[details:team_name] = 0
+        memo[details[:team_name]] += player[:points]
       end
     memo
   end
