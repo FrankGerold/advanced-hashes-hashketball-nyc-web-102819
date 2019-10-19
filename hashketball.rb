@@ -201,4 +201,5 @@ def player_stats (player_name)
     end
     memo
   end
+  stats
 end
