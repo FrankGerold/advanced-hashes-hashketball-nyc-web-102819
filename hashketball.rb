@@ -218,7 +218,7 @@ def big_shoe_rebounds
     end
     memo
   end
-  rebound =  teams.reduce(0) do
+  rebound =  teams.reduce do
     |memo, (team, details)|
     details[:players].each do
       |player|
