@@ -195,7 +195,7 @@ def player_stats (player_name)
     details[:players].each do
       |player|
       if player[:player_name] == player_name
-        memo.merge(player)
+        memo = memo.merge(player)
         memo.delete(:player_name)
       end
     end
