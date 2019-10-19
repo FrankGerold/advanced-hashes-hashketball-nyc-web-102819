@@ -239,8 +239,8 @@ def most_points_scored
     |(team, details)|
     details[:players].each do
       |player|
-      if player[:shoe] > shoe
-        shoe = player[:shoe]
+      if player[:points] > score
+        score = player[:points]
         big_player = player[:player_name]
       end
     end
