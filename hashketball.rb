@@ -256,6 +256,7 @@ def winning_team
         |(player)|
         if !memo[details[:team_name]]
           memo[details:team_name] = 0
+        end
         memo[details[:team_name]] += player[:points]
       end
     memo
