@@ -190,7 +190,15 @@ end
 
 def player_stats (player_name)
   teams = game_hash
-  stats = teams.reduce([]) do
+  stats = teams.reduce({}) do
     |memo, (team, details)|
-    
+    details[:players].each do
+      |player|
+      if player[:player_name] == player_name
+        memo.merge(player)
+        memo.delete(:player_name)
+      end
+    end
+    memo
+  end
 end
