@@ -258,3 +258,14 @@ def winning_team
       end
     memo
   end
+  high = 0
+  winner = team_score.reduce do
+    |memo, (team, score)|
+    if score > high
+      high = score 
+      memo = team
+    end
+    memo
+  end
+  winner
+end
