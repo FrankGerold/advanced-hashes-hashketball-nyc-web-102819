@@ -206,9 +206,12 @@ end
 
 def big_shoe_rebounds
   teams = game_hash
-  shoe = teams.reduce(0) do
+  shoe = teams.reduce do
     |memo, (team, details)|
-    details
+    details[:players].each do
+      |player|
+      if player
+    end
     memo
   end
   shoe
