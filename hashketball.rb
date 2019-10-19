@@ -203,3 +203,13 @@ def player_stats (player_name)
   end
   stats
 end
+
+def big_shoe_rebounds
+  teams = game_hash
+  shoe = teams.reduce(0) do
+    |memo, (team, details)|
+    details
+    memo
+  end
+  shoe
+end
