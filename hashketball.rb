@@ -218,5 +218,15 @@ def big_shoe_rebounds
     end
     memo
   end
-  rebound = 
+  rebound =  teams.reduce(0) do
+    |memo, (team, details)|
+    details[:players].each do
+      |player|
+      if player[:player_name] == big_player
+        memo = player[:rebounds]
+      end
+    end
+    memo
+  end
+  rebound
 end
