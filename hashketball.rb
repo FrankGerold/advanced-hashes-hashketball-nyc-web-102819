@@ -189,8 +189,8 @@ def player_numbers (team_name)
 end
 
 def player_stats (player_name)
-  
   teams = game_hash
-  numbers = teams.reduce([]) do
+  stats = teams.reduce([]) do
     |memo, (team, details)|
+    
 end
